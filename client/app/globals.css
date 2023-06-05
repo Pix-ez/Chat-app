@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  --second-gradient-coords: 100% 67%;
+  --first-gradient-coords: -1% 32%;
+  background-image: radial-gradient(circle closest-corner at var(--first-gradient-coords),
+      rgba(33, 103, 216, 0.85), transparent),
+    radial-gradient(circle closest-corner at var(--second-gradient-coords),
+      rgba(138, 41, 129, 0.7), transparent);
+      
+
+}
+.left-to-right {animation:myfirst 0.4s ease;}
+.right-to-left {animation:mysecond 1s ease;}
+
+@keyframes myfirst {
+  0%   {width:0; margin-left:100%;}
+    100% {width: 100%; margin-left: 0;}
+}
+@keyframes mysecond {
+  0%   {width:0;}
+    100% {width: 100%;}
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
