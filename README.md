@@ -4,6 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## There are client and server directory
 
+mongodb is used as a database and socket.io is used to send realtime messages.
+Don't forget to add api keys and mongodb url inside - client/next.config.js env variables.
+
 
 
 ## inside Client -
